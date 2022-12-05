@@ -1,0 +1,9 @@
+torch
+torchvision
+torchaudio
+paddleocr>=2.0.1
+fastapi
+uvicorn[standard]
+httpie
+python-multipart
+opencv-python==4.5.5.64
