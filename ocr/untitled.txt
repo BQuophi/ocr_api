@@ -1,0 +1,24 @@
+INSTALLATION DEPENDENCIES
+
+!pip install torch torchvision torchaudio
+!pip install easyocr
+!pip install "paddleocr>=2.0.1"
+!python3 -m pip install paddlepaddle -i https://mirror.baidu.com/pypi/simple
+!pip install fastapi uvicorn[standard] httpie python-multipart 
+
+pip show torch paddleocr fastapi uvicorn[standard] httpie python-multipart
+cd C:\Users\toluo\OneDrive\Desktop\Portfolio\Zummit\ocr
+docker build -t kyc-ocr .
+
+COMMANDS TO RUN
+!http -v GET https://603cca51f4333a0017b68509.mockapi.io/todos "My-Header: My-Header-Value"
+!uvicorn ocr_test:app --port 5000 --reload
+!http --form POST http://localhost:8000/ocr image@./test_img1.jpg
+!http --form POST http://localhost:8000/ocr image@./voters_card2.jpg
+
+python -c "import sys; print('\n'.join(sys.path))"
+
+pip uninstall opencv-python
+pip uninstall opencv-contrib-python
+pip uninstall opencv-contrib-python-headless
+pip install opencv-python==4.5.5.64
